@@ -20,7 +20,7 @@ namespace bmakeLanguageService
         private static Regex _commentRegex = new Regex(@"([^\S\n]*#.+)", RegexOptions.Compiled);
         //private static Regex _variableRegex = new Regex(@"(?<name>[^\f\n\r\t\v=]+)(?<value>[^\S\n]*=[^\S\n]*[^\s=\d]+)", RegexOptions.Compiled);
         private static Regex _keywordRegex = new Regex(@"(%include\b|%undef\b|%if defined\b|%if\b|%elif\b|%else\b|%endif\b|%warn|%error|always)", RegexOptions.Compiled);
-        private static Regex _referenceRegex = new Regex(@"(?<start>\$(\(|\{))(?<value>[\s\S]*)(?<end>\)|\})", RegexOptions.Compiled);
+        private static Regex _referenceRegex = new Regex(@"(?<start>\$(\(|\{))(?<value>[\s\S]*?)(?<end>\)|\})", RegexOptions.Compiled);
         private static Regex _preProcessRegex = new Regex(@"@", RegexOptions.Compiled);
         private static Regex _logicRegex = new Regex(@"(\|\||&&|!=|=|\+)", RegexOptions.Compiled);
         private static Regex _stringRegex = new Regex(@"(""[^\n\r""]*"")", RegexOptions.Compiled);
